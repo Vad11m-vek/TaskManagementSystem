@@ -1,0 +1,8 @@
+{
+	"port": 5000,
+	"baseUrl": "http://localhost:5000",
+	"jwtSecret": "THESE VIOLENT DELIGHTS HAVE VIOLENT ENDS",
+	"user": "taskm555@gmail.com",
+	"pass": ":;6N$(d%1yG)6Pio",
+	"mongoUrl": "mongodb+srv://kulchytskyi:1596842@cluster0.9mmxx.mongodb.net/app?retryWrites=true&w=majority"
+}
