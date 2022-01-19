@@ -1,10 +1,12 @@
-import React from "react"
+import React from 'react';
 import { BrowserRouter as Router } from "react-router-dom"
 import { useRoutes } from "./routes";
 import { useAuth } from "./hooks/auth.hook"
 import { AuthContext } from "./context/AuthContext"
-import { NavBar } from "./components/Navbar";
+import { NavBar } from "./components/Navbar"
 import { Loader } from './components/Loader'
+
+
 
 
 function App() {
@@ -16,17 +18,23 @@ function App() {
 		return <Loader />
 	}
 	return (
+
 		<AuthContext.Provider value={{
 			token, login, logout, userId, isAuthenticated
 		}}>
+
 			<Router>
-				{isAuthenticated && <NavBar />}
+				{isAuthenticated && < NavBar />}
+
 				<div className="container">
 					{routes}
 				</div>
+
 			</Router>
+
 		</AuthContext.Provider>
-	);
+
+	)
 }
 
 export default App;

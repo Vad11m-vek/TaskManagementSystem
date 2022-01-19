@@ -32,6 +32,7 @@ export const AuthPage = () => {
 	}
 
 	return (
+
 		<Card style={{ width: '18rem' }}>
 			<Card.Body>
 				<Card.Title>Task Management System</Card.Title>

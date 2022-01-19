@@ -4,6 +4,7 @@ import { AuthContext } from '../context/AuthContext'
 import { Loader } from '../components/Loader'
 import { TasksList } from '../components/TasksList'
 import { useParams } from "react-router-dom"
+
 const storageName = 'userData'
 
 export const DetailPage = () => {

@@ -1,9 +1,8 @@
 import React from "react"
 import { Switch, Route, Redirect } from "react-router-dom"
-import { TasksPage } from "./pages/TasksPage"
+import TasksPage from "./pages/TasksPage"
 import { CreatePage } from "./pages/CreatePage"
 import { AuthPage } from "./pages/AuthPage"
-import Welcome from "./components/Welcome"
 import { DetailPage } from './pages/DetailPage'
 
 export const useRoutes = isAuthenticated => {
@@ -16,9 +15,6 @@ export const useRoutes = isAuthenticated => {
 				<Route exact path="/task">
 					<TasksPage />
 				</Route>
-				<Route exact path="/confirm/:confirmationCode">
-					<DetailPage />
-				</Route>
 			</Switch>
 		)
 	}
@@ -26,6 +22,9 @@ export const useRoutes = isAuthenticated => {
 		<Switch>
 			<Route path="/" exact>
 				<AuthPage />
+			</Route>
+			<Route exact path="/confirm/:confirmationCode">
+				<DetailPage />
 			</Route>
 			<Redirect to="/" />
 		</Switch>

@@ -5,7 +5,7 @@ export const useAuth = () => {
 	const [token, setToken] = useState(null)
 	const [ready, setReady] = useState(false)
 	const [userId, setUserId] = useState(null)
-	const [userStatus, setUserStatus] = useState(null)
+	const [userStatus, setUserStatus] = useState('Pending')
 
 	const login = useCallback((jwtToken, id, userStatus) => {
 		setToken(jwtToken)
